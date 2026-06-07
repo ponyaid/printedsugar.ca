@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Printed Sugar – Custom Printed Sugar Cookies | Sarnia, ON</title>
+  <meta name="description" content="Printed Sugar creates beautiful custom printed sugar cookies for any occasion — birthdays, weddings, graduations, corporate events and more. Order in Sarnia, Ontario." />
+  <meta name="keywords" content="custom sugar cookies, printed cookies, edible image cookies, Sarnia cookies, Ontario custom cookies, birthday cookies, graduation cookies, wedding cookies" />
+  <meta name="author" content="Printed Sugar" />
+  <link rel="canonical" href="https://printedsugar.ca/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://printedsugar.ca/" />
+  <meta property="og:title" content="Printed Sugar – Custom Printed Sugar Cookies" />
+  <meta property="og:description" content="Beautiful custom printed sugar cookies for every occasion. Order yours today!" />
+  <meta property="og:image" content="https://printedsugar.ca/photo2.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Printed Sugar – Custom Sugar Cookies" />
+  <meta name="twitter:description" content="Beautiful custom printed sugar cookies for every occasion." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzZiM2EyYSIvPgogIDx0ZXh0IHg9IjE2IiB5PSIyMiIgZm9udC1mYW1pbHk9InNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iI2YyYzRiMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UDwvdGV4dD4KPC9zdmc+Cg==" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:  #fdf6ee;
+      --blush:  #f2c4b0;
+      --rose:   #c97b6e;
+      --brown:  #6b3a2a;
+      --text:   #3d2015;
+      --light:  #fbe9df;
+    }
+
+    html, body {
+      min-height: 100vh;
+      font-family: 'Lato', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .blob { position: fixed; border-radius: 50%; filter: blur(80px); opacity: 0.32; pointer-events: none; z-index: 0; }
+    .blob-1 { width: 500px; height: 500px; background: var(--blush); top: -100px; right: -80px; }
+    .blob-2 { width: 360px; height: 360px; background: #f5dbc8; bottom: -60px; left: -60px; }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 44px 24px 20px;
+      animation: fadeDown .8s ease both;
+    }
+    .logo-tag {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6.5vw, 4.6rem);
+      font-weight: 600;
+      line-height: 1.1;
+      color: var(--brown);
+    }
+    h1 em { font-style: italic; color: var(--rose); }
+    .tagline {
+      margin-top: 12px;
+      font-size: .95rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: #a0634f;
+    }
+    .divider { width: 56px; height: 2px; background: var(--blush); margin: 20px auto; border-radius: 2px; }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1160px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 0 32px 36px;
+      animation: fadeUp .9s .2s ease both;
+      align-items: start;
+    }
+
+    .photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 230px 195px;
+      gap: 12px;
+      padding-right: 36px;
+    }
+
+    .photo {
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--light);
+      position: relative;
+      box-shadow: 0 6px 28px rgba(107,58,42,.12);
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+    .photo:hover { transform: translateY(-5px) scale(1.01); box-shadow: 0 18px 44px rgba(107,58,42,.18); }
+    .photo:first-child { grid-column: 1 / 3; border-radius: 24px; }
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(0.92) brightness(1.03);
+      transition: filter .35s ease;
+    }
+    .photo:hover img { filter: saturate(1.05) brightness(1.06); }
+    .photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      box-shadow: inset 0 0 30px rgba(107,58,42,.08);
+      pointer-events: none;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 26px;
+      padding-top: 8px;
+    }
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 10px;
+    }
+    .description {
+      font-size: 1.02rem;
+      line-height: 1.78;
+      font-weight: 300;
+      color: #5a3020;
+    }
+
+    .occasions { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .occasions li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: .93rem;
+      font-weight: 400;
+      color: var(--brown);
+    }
+    .occasions li::before {
+      content: '';
+      width: 26px; height: 2px;
+      background: var(--blush);
+      flex-shrink: 0;
+      border-radius: 2px;
+    }
+
+    .cta-block { display: flex; flex-direction: column; gap: 14px; }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--brown);
+      color: #fdf6ee;
+      border: none;
+      border-radius: 50px;
+      padding: 15px 36px;
+      font-family: 'Lato', sans-serif;
+      font-size: .9rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background .25s, transform .2s;
+      width: fit-content;
+    }
+    .cta-btn:hover { background: var(--rose); transform: translateY(-2px); }
+
+    .contacts { display: flex; flex-direction: column; gap: 9px; }
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .88rem;
+      color: #5a3020;
+      font-weight: 300;
+    }
+    .contact-row svg { flex-shrink: 0; color: var(--rose); }
+    .contact-row a { color: var(--rose); text-decoration: none; font-weight: 600; }
+    .contact-row a:hover { text-decoration: underline; }
+
+    .insta-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 2px;
+      padding: 10px 16px;
+      background: var(--light);
+      border-radius: 12px;
+      width: fit-content;
+      font-size: .88rem;
+      font-weight: 300;
+      color: #5a3020;
+      text-decoration: none;
+      transition: background .2s, transform .2s;
+    }
+    .insta-row:hover { background: var(--blush); transform: translateY(-2px); }
+    .insta-row svg { flex-shrink: 0; color: var(--rose); }
+
+    footer {
+      text-align: center;
+      padding: 18px 24px 28px;
+      font-size: .78rem;
+      letter-spacing: 1px;
+      color: #c4907f;
+      animation: fadeUp .9s .4s ease both;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 800px) {
+      main { grid-template-columns: 1fr; padding: 0 18px 36px; }
+      .photos { padding-right: 0; margin-bottom: 32px; grid-template-rows: 210px 170px; }
+    }
+    @media (max-width: 480px) {
+      .photos { grid-template-rows: 180px 150px; gap: 9px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <header>
+    <span class="logo-tag">Handcrafted with love</span>
+    <h1>Printed <em>Sugar</em></h1>
+    <p class="tagline">Custom printed sugar cookies for every occasion</p>
+    <div class="divider"></div>
+  </header>
+
+  <main>
+    <div class="photos">
+      <div class="photo">
+        <img src="./img/image1.png" alt="Printed Sugar – floral custom sugar cookies" loading="eager" />
+      </div>
+      <div class="photo">
+        <img src="./img/image2.png" alt="Printed Sugar – teacher appreciation custom cookies" loading="lazy" />
+      </div>
+      <div class="photo">
+        <img src="./img/image3.png" alt="Printed Sugar – graduation custom cookies 2026" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="info">
+      <div>
+        <p class="section-label">Our product</p>
+        <p class="description">
+          One cookie — endless possibilities.<br/>
+          Each piece is a hand-baked sugar cookie with your custom design
+          printed directly onto it, using fresh, high-quality ingredients
+          for a taste as beautiful as the design.
+        </p>
+      </div>
+
+      <div>
+        <p class="section-label">Perfect for</p>
+        <ul class="occasions">
+          <li>Weddings &amp; engagements</li>
+          <li>Birthdays &amp; celebrations</li>
+          <li>Baby showers &amp; gender reveals</li>
+          <li>Graduations &amp; school events</li>
+          <li>Corporate gifts &amp; events</li>
+          <li>Holidays &amp; seasonal gifting</li>
+          <li>Any personal occasion</li>
+        </ul>
+      </div>
+
+      <div class="cta-block">
+        <a class="cta-btn" href="mailto:printedsugar@gmail.com">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+          Order your cookies
+        </a>
+
+        <div class="contacts">
+          <div class="contact-row">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <a href="mailto:printedsugar@gmail.com">printedsugar@gmail.com</a>
+          </div>
+          <div class="contact-row">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6 6l.93-.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16z"/>
+            </svg>
+            <a href="tel:+15489979320">+1 (548) 997-9320</a>
+          </div>
+        </div>
+
+        <a class="insta-row" href="https://instagram.com/printedsugar.ca" target="_blank" rel="noopener noreferrer">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+          <span>Follow us &nbsp;<strong>@printedsugar.ca</strong></span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Printed Sugar &nbsp;·&nbsp; Sarnia, Ontario &nbsp;·&nbsp; Made with ♡</p>
+  </footer>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Printed Sugar",
+  "description": "Custom printed sugar cookies for every occasion in Sarnia, Ontario.",
+  "url": "https://printedsugar.ca",
+  "telephone": "+15489979320",
+  "email": "printedsugar@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sarnia",
+    "addressRegion": "ON",
+    "addressCountry": "CA"
+  },
+  "sameAs": ["https://www.instagram.com/printedsugar.ca"]
+}
+</script>
+</body>
+</html>
